@@ -91,3 +91,19 @@ function addColors(results) {
         }
     })
 }
+
+const radioInputs = document.querySelectorAll("input[type='radio']");
+// Pour chaque Input je lui ajoute un écouteur
+// élément input permet de connaître le changement de son statut
+radioInputs.forEach(radioInput => radioInput.addEventListener('input', resetColor));
+
+function resetColor(e) {
+    // getAttribute permet de récupérer un attribut et slice() de passer un certains nombre de caractère pour garder seulement
+    // ce qui nous est utile
+    const index = e.taerget.getAttribute("name").slice(1) -1;
+    const parentQuestionblock = questions[index];
+
+    parentQuestionblock.style.color = "#f1f1f1";
+    parentQuestionblock.style.backgroundImage = "#none";
+
+}
