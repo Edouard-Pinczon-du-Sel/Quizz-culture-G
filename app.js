@@ -100,10 +100,10 @@ radioInputs.forEach(radioInput => radioInput.addEventListener('input', resetColo
 function resetColor(e) {
     // getAttribute permet de récupérer un attribut et slice() de passer un certains nombre de caractère pour garder seulement
     // ce qui nous est utile
-    const index = e.taerget.getAttribute("name").slice(1) -1;
+    const index = e.target.getAttribute("name").slice(1) -1;
     const parentQuestionblock = questions[index];
 
-    parentQuestionblock.style.color = "#f1f1f1";
-    parentQuestionblock.style.backgroundImage = "#none";
+    parentQuestionblock.style.backgroundColor = "#f1f1f1";
+    parentQuestionblock.style.backgroundImage = "none";
 
 }
